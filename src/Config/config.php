@@ -13,70 +13,70 @@ return [
     | Auth Model
     |--------------------------------------------------------------------------
     |
-    | This is the Auth model used by Teamwork.
+    | This is the Auth model used by LaraTeam.
     |
     */
     'user_model' => config('auth.providers.users.model', App\User::class),
     /*
     |--------------------------------------------------------------------------
-    | Teamwork users Table
+    | LaraTeam users Table
     |--------------------------------------------------------------------------
     |
-    | This is the users table name used by Teamwork.
+    | This is the users table name used by LaraTeam.
     |
     */
     'users_table' => 'users',
     /*
     |--------------------------------------------------------------------------
-    | Teamwork Team Model
+    | LaraTeam Team Model
     |--------------------------------------------------------------------------
     |
-    | This is the Team model used by Teamwork to create correct relations.  Update
+    | This is the Team model used by LaraTeam to create correct relations.  Update
     | the team if it is in a different namespace.
     |
     */
     'team_model' => \DevinGray\LaraTeams\Classes\Team::class,
     /*
     |--------------------------------------------------------------------------
-    | Teamwork teams Table
+    | LaraTeam teams Table
     |--------------------------------------------------------------------------
     |
-    | This is the teams table name used by Teamwork to save teams to the database.
+    | This is the teams table name used by LaraTeam to save teams to the database.
     |
     */
     'teams_table' => 'teams',
     /*
     |--------------------------------------------------------------------------
-    | Teamwork team_user Table
+    | LaraTeam team_user Table
     |--------------------------------------------------------------------------
     |
-    | This is the team_user table used by Teamwork to save assigned teams to the
+    | This is the team_user table used by LaraTeam to save assigned teams to the
     | database.
     |
     */
     'team_user_table' => 'team_user',
     /*
     |--------------------------------------------------------------------------
-    | User Foreign key on Teamwork's team_user Table (Pivot)
+    | User Foreign key on LaraTeam's team_user Table (Pivot)
     |--------------------------------------------------------------------------
     */
     'user_foreign_key' => 'id',
     /*
     |--------------------------------------------------------------------------
-    | Teamwork Team Invite Model
+    | LaraTeam Team Invite Model
     |--------------------------------------------------------------------------
     |
-    | This is the Team Invite model used by Teamwork to create correct relations.
+    | This is the Team Invite model used by LaraTeam to create correct relations.
     | Update the team if it is in a different namespace.
     |
     */
     'invite_model' => \DevinGray\LaraTeams\Classes\Invite::class,
     /*
     |--------------------------------------------------------------------------
-    | Teamwork team invites Table
+    | LaraTeam team invites Table
     |--------------------------------------------------------------------------
     |
-    | This is the team invites table name used by Teamwork to save sent/pending
+    | This is the team invites table name used by LaraTeam to save sent/pending
     | invitation into teams to the database.
     |
     */

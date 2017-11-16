@@ -23,7 +23,7 @@
       */
      public function team()
      {
-         return $this->hasOne( Config::get( 'teamwork.team_model' ), 'id', 'team_id' );
+         return $this->hasOne( Config::get( 'larateams.team_model' ), 'id', 'team_id' );
      }
      /**
       * Has-One relations with the user model.
@@ -32,7 +32,7 @@
       */
      public function user()
      {
-         return $this->hasOne( Config::get( 'teamwork.user_model' ), 'email', 'email' );
+         return $this->hasOne( Config::get( 'larateams.user_model' ), 'email', 'email' );
      }
      /**
       * Has-One relations with the user model.
@@ -41,6 +41,6 @@
       */
      public function inviter()
      {
-         return $this->hasOne( Config::get( 'teamwork.user_model' ), 'id', 'user_id' );
+         return $this->hasOne( Config::get( 'larateams.user_model' ), 'id', 'user_id' );
      }
  }

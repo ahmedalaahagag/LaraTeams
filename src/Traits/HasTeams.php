@@ -206,7 +206,7 @@ trait HasTeams
         if( $team !== 0 && $team !== null )
         {
             $team        = $this->retrieveTeamId( $team );
-            $teamModel   = Config::get( 'teamwork.team_model' );
+            $teamModel   = Config::get( 'larateams.team_model' );
             $teamObject  = ( new $teamModel() )->find( $team );
             if( !$teamObject )
             {
