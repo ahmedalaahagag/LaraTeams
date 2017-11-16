@@ -1,0 +1,27 @@
+{
+    "name": "DevinGray/LaraTeams",
+    "description": "Laravel package",
+    "license": "MIT",
+    "type": "library",
+    "require": {
+        "php": ">=7.0",
+        "illuminate/support": "5.*"
+    },
+    "author": {
+        "name": "Devin Gray ",
+        "email": "devin.gray.email@gmail.com"
+    },
+    "autoload": {
+        "psr-4": {
+            "DevinGray\\LaraTeams\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DevinGray\\LaraTeams\\LaraTeamsServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev"
+}

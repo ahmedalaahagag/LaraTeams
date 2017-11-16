@@ -1,0 +1,3 @@
+# DevinGray/LaraTeams
+
+Laravel package
