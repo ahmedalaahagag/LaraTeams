@@ -54,6 +54,19 @@ class CreateLaraTeamsTable extends Migration
                   ->on( \Config::get( 'larateams.teams_table' ) )
                   ->onDelete( 'cascade' );
         });
+
+        Schema::create('team_roles', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->string('label')->nullable();
+            $table->timestamps();
+        });
+
+        Schema::table(\Config::get( 'larateams.team_user_table' ), function (Blueprint $table) {
+            $table->integer('team_role_id')->unsigned()->default(\Config::get('larateams.default_team_role'));
+        });
+
+
     }
     /**
      * Reverse the migrations.
@@ -73,5 +86,10 @@ class CreateLaraTeamsTable extends Migration
         Schema::drop(\Config::get('larateams.team_user_table'));
         Schema::drop(\Config::get('larateams.team_invites_table'));
         Schema::drop(\Config::get('larateams.teams_table'));
+
+        Schema::table(\Config::get( 'larateams.team_user_table' ), function ($table) {
+            $table->dropColumn('team_role_id');
+        });
+        Schema::dropIfExists('team_roles');
     }
 }

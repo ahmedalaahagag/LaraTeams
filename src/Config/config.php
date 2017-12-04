@@ -81,4 +81,8 @@ return [
     |
     */
     'team_invites_table' => 'team_invites',
+
+    'default_team_role' => 3, // Member
+    'default_owner_role' => 1, // Owner
+
 ];
